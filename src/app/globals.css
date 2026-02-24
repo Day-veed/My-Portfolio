@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070A0F;
+  --foreground: #E6EAF2;
+  --surface: #0B1020;
+  --surface-2: #0F1730;
+  --muted: #A6B0C3;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #7C5CFF;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--accent) 75%, white);
+  outline-offset: 2px;
+}
